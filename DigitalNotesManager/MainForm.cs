@@ -1,11 +1,5 @@
 using DigitalNotesManager.Data;
 using DigitalNotesManager.Helpers;
-using DigitalNotesManager.Models;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Windows.Forms;
 using Timer = System.Windows.Forms.Timer;
 
 namespace DigitalNotesManager
@@ -219,6 +213,13 @@ namespace DigitalNotesManager
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
             }
+        }
+
+        private void progressChartsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var statsForm = new StatisticsForm();
+            statsForm.MdiParent = this;
+            statsForm.Show();
         }
     }
 }
