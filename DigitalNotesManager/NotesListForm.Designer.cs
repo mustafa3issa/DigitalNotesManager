@@ -28,6 +28,7 @@ namespace DigitalNotesManager
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NotesListForm));
             dgvNotes = new DataGridView();
             cmbCategoryFilter = new ComboBox();
             txtSearch = new TextBox();
@@ -138,9 +139,11 @@ namespace DigitalNotesManager
             // btnNewNote
             // 
             btnNewNote.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnNewNote.BackColor = Color.LightYellow;
-            btnNewNote.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            btnNewNote.Location = new Point(660, 22);
+            btnNewNote.BackColor = Color.DodgerBlue;
+            btnNewNote.FlatStyle = FlatStyle.Flat;
+            btnNewNote.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnNewNote.ForeColor = SystemColors.HighlightText;
+            btnNewNote.Location = new Point(662, 43);
             btnNewNote.Name = "btnNewNote";
             btnNewNote.Size = new Size(100, 30);
             btnNewNote.TabIndex = 9;
@@ -151,9 +154,11 @@ namespace DigitalNotesManager
             // btnDeleteNote
             // 
             btnDeleteNote.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnDeleteNote.BackColor = Color.LightCoral;
-            btnDeleteNote.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            btnDeleteNote.Location = new Point(660, 62);
+            btnDeleteNote.BackColor = Color.Crimson;
+            btnDeleteNote.FlatStyle = FlatStyle.Flat;
+            btnDeleteNote.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDeleteNote.ForeColor = Color.White;
+            btnDeleteNote.Location = new Point(768, 43);
             btnDeleteNote.Name = "btnDeleteNote";
             btnDeleteNote.Size = new Size(100, 30);
             btnDeleteNote.TabIndex = 10;
@@ -180,6 +185,7 @@ namespace DigitalNotesManager
             Controls.Add(btnDeleteNote);
             Font = new Font("Segoe UI", 10F);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "NotesListForm";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Notes List";

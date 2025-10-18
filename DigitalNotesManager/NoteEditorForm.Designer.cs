@@ -34,6 +34,7 @@ namespace DigitalNotesManager
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NoteEditorForm));
             txtTitle = new TextBox();
             rtbContent = new RichTextBox();
             dtpReminder = new DateTimePicker();
@@ -85,7 +86,9 @@ namespace DigitalNotesManager
             // btnSave
             // 
             btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnSave.BackColor = Color.LightSkyBlue;
+            btnSave.BackColor = Color.DodgerBlue;
+            btnSave.FlatStyle = FlatStyle.Flat;
+            btnSave.ForeColor = Color.White;
             btnSave.Location = new Point(282, 413);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(100, 35);
@@ -97,7 +100,10 @@ namespace DigitalNotesManager
             // btnDelete
             // 
             btnDelete.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnDelete.BackColor = Color.LightCoral;
+            btnDelete.BackColor = Color.Crimson;
+            btnDelete.FlatStyle = FlatStyle.Flat;
+            btnDelete.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDelete.ForeColor = Color.White;
             btnDelete.Location = new Point(503, 413);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(100, 35);
@@ -109,6 +115,8 @@ namespace DigitalNotesManager
             // btnClose
             // 
             btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnClose.FlatStyle = FlatStyle.Popup;
+            btnClose.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnClose.Location = new Point(613, 413);
             btnClose.Name = "btnClose";
             btnClose.Size = new Size(100, 35);
@@ -204,7 +212,9 @@ namespace DigitalNotesManager
             // BtnSaveAs
             // 
             BtnSaveAs.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            BtnSaveAs.BackColor = Color.DeepSkyBlue;
+            BtnSaveAs.BackColor = Color.RoyalBlue;
+            BtnSaveAs.FlatStyle = FlatStyle.Flat;
+            BtnSaveAs.ForeColor = Color.White;
             BtnSaveAs.Location = new Point(392, 413);
             BtnSaveAs.Name = "BtnSaveAs";
             BtnSaveAs.Size = new Size(100, 35);
@@ -236,6 +246,7 @@ namespace DigitalNotesManager
             Controls.Add(btnDelete);
             Controls.Add(btnClose);
             Font = new Font("Segoe UI", 10F);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MinimumSize = new Size(750, 500);
             Name = "NoteEditorForm";
             StartPosition = FormStartPosition.CenterScreen;
