@@ -34,6 +34,7 @@
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             menuStrip = new MenuStrip();
             fileMenu = new ToolStripMenuItem();
             newToolStripMenuItem = new ToolStripMenuItem();
@@ -47,10 +48,10 @@
             formatToolStripMenuItem = new ToolStripMenuItem();
             viewMenu = new ToolStripMenuItem();
             notesListToolStripMenuItem = new ToolStripMenuItem();
-            progressChartsToolStripMenuItem = new ToolStripMenuItem();
             arrangeMenu = new ToolStripMenuItem();
             tileToolStripMenuItem = new ToolStripMenuItem();
             cascadeToolStripMenuItem = new ToolStripMenuItem();
+            progressChartsToolStripMenuItem = new ToolStripMenuItem();
             helpMenu = new ToolStripMenuItem();
             aboutToolStripMenuItem = new ToolStripMenuItem();
             topPanel = new Panel();
@@ -151,22 +152,15 @@
             // notesListToolStripMenuItem
             // 
             notesListToolStripMenuItem.Name = "notesListToolStripMenuItem";
-            notesListToolStripMenuItem.Size = new Size(224, 28);
+            notesListToolStripMenuItem.Size = new Size(213, 28);
             notesListToolStripMenuItem.Text = "Notes List";
             notesListToolStripMenuItem.Click += notesListToolStripMenuItem_Click;
-            // 
-            // progressChartsToolStripMenuItem
-            // 
-            progressChartsToolStripMenuItem.Name = "progressChartsToolStripMenuItem";
-            progressChartsToolStripMenuItem.Size = new Size(224, 28);
-            progressChartsToolStripMenuItem.Text = "Progress Charts";
-            progressChartsToolStripMenuItem.Click += progressChartsToolStripMenuItem_Click;
             // 
             // arrangeMenu
             // 
             arrangeMenu.DropDownItems.AddRange(new ToolStripItem[] { tileToolStripMenuItem, cascadeToolStripMenuItem });
             arrangeMenu.Name = "arrangeMenu";
-            arrangeMenu.Size = new Size(224, 28);
+            arrangeMenu.Size = new Size(213, 28);
             arrangeMenu.Text = "Arrange";
             // 
             // tileToolStripMenuItem
@@ -182,6 +176,13 @@
             cascadeToolStripMenuItem.Size = new Size(157, 28);
             cascadeToolStripMenuItem.Text = "Cascade";
             cascadeToolStripMenuItem.Click += cascadeToolStripMenuItem_Click;
+            // 
+            // progressChartsToolStripMenuItem
+            // 
+            progressChartsToolStripMenuItem.Name = "progressChartsToolStripMenuItem";
+            progressChartsToolStripMenuItem.Size = new Size(213, 28);
+            progressChartsToolStripMenuItem.Text = "Progress Charts";
+            progressChartsToolStripMenuItem.Click += progressChartsToolStripMenuItem_Click;
             // 
             // helpMenu
             // 
@@ -223,6 +224,7 @@
             ClientSize = new Size(942, 673);
             Controls.Add(topPanel);
             Controls.Add(menuStrip);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             IsMdiContainer = true;
             MainMenuStrip = menuStrip;
             MinimumSize = new Size(960, 720);

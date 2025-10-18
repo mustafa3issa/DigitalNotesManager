@@ -1,5 +1,6 @@
 using DigitalNotesManager.Data;
 using DigitalNotesManager.Helpers;
+using System.Text;
 using Timer = System.Windows.Forms.Timer;
 
 namespace DigitalNotesManager
@@ -167,8 +168,20 @@ namespace DigitalNotesManager
         // HELP MENU
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Digital Notes Manager\nCreated by Mustafa Issa", "About");
+            var aboutText = new StringBuilder();
+            aboutText.AppendLine("Digital Notes Manager");
+            aboutText.AppendLine("Version 0.9.0 (Beta)");
+            aboutText.AppendLine();
+            aboutText.AppendLine("A Windows Forms application for creating, organizing, and managing personal notes with reminders, rich text editing, and data visualization.");
+            aboutText.AppendLine();
+            aboutText.AppendLine("Developed by: Mustafa Issa");
+            aboutText.AppendLine("Powered by: .NET 8.0 & Entity Framework Core");
+            aboutText.AppendLine();
+            aboutText.AppendLine("© 2025 All Rights Reserved.");
+
+            MessageBox.Show(aboutText.ToString(), "About Digital Notes Manager", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
